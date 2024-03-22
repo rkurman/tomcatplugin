@@ -85,7 +85,8 @@ public class TomcatPreferencePage extends PreferencePage implements IWorkbenchPr
                                                             {PREF_PAGE_VERSION6_LABEL, TomcatLauncherPlugin.TOMCAT_VERSION6},
                                                             {PREF_PAGE_VERSION7_LABEL, TomcatLauncherPlugin.TOMCAT_VERSION7 },
                                                             {PREF_PAGE_VERSION8_LABEL, TomcatLauncherPlugin.TOMCAT_VERSION8 },
-                                                            {PREF_PAGE_VERSION9_LABEL, TomcatLauncherPlugin.TOMCAT_VERSION9 }
+                                                            {PREF_PAGE_VERSION9_LABEL, TomcatLauncherPlugin.TOMCAT_VERSION9 },
+                                                            {PREF_PAGE_VERSION10_LABEL, TomcatLauncherPlugin.TOMCAT_VERSION10 }
                                             },
                                             composite,
                                             true);

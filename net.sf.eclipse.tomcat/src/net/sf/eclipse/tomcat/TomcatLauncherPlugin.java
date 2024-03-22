@@ -88,6 +88,7 @@ public class TomcatLauncherPlugin extends AbstractUIPlugin {
     static final String TOMCAT_VERSION7 = "tomcatV7";
     static final String TOMCAT_VERSION8 = "tomcatV8";
     static final String TOMCAT_VERSION9 = "tomcatV9";
+    static final String TOMCAT_VERSION10 = "tomcatV10";
 
     static final String TOMCAT_PREF_CONFMODE_KEY = "configMode";
     static final String SERVERXML_MODE = "serverFile";
@@ -282,29 +283,33 @@ public class TomcatLauncherPlugin extends AbstractUIPlugin {
     public TomcatBootstrap getTomcatBootstrap() {
         TomcatBootstrap tomcatBootstrap = null;
 
-        if(getTomcatVersion().equals(TOMCAT_VERSION3)) {
+        String tomcatVersion = getTomcatVersion();
+		if(tomcatVersion.equals(TOMCAT_VERSION3)) {
             tomcatBootstrap = new Tomcat3Bootstrap("Tomcat 3.x");
         }
-        if(getTomcatVersion().equals(TOMCAT_VERSION4)) {
+        if(tomcatVersion.equals(TOMCAT_VERSION4)) {
             tomcatBootstrap = new Tomcat4Bootstrap("Tomcat 4.x");
         }
-        if(getTomcatVersion().equals(TOMCAT_VERSION41)) {
+        if(tomcatVersion.equals(TOMCAT_VERSION41)) {
             tomcatBootstrap = new Tomcat41Bootstrap("Tomcat 4.1.x");
         }
-        if(getTomcatVersion().equals(TOMCAT_VERSION5)) {
+        if(tomcatVersion.equals(TOMCAT_VERSION5)) {
             tomcatBootstrap = new Tomcat5Bootstrap("Tomcat 5.x");
         }
-        if(getTomcatVersion().equals(TOMCAT_VERSION6)) {
+        if(tomcatVersion.equals(TOMCAT_VERSION6)) {
             tomcatBootstrap = new Tomcat6Bootstrap("Tomcat 6.x");
         }
-        if(getTomcatVersion().equals(TOMCAT_VERSION7)) {
+        if(tomcatVersion.equals(TOMCAT_VERSION7)) {
             tomcatBootstrap = new Tomcat7Bootstrap("Tomcat 7.x");
         }
-        if (getTomcatVersion().equals(TOMCAT_VERSION8)) {
+        if (tomcatVersion.equals(TOMCAT_VERSION8)) {
             tomcatBootstrap = new Tomcat7Bootstrap("Tomcat 8.x");
         }
-        if (getTomcatVersion().equals(TOMCAT_VERSION9)) {
+        if (tomcatVersion.equals(TOMCAT_VERSION9)) {
         	tomcatBootstrap = new Tomcat7Bootstrap("Tomcat 9.x");
+        }
+        if (tomcatVersion.equals(TOMCAT_VERSION10)) {
+        	tomcatBootstrap = new Tomcat7Bootstrap("Tomcat 10.x");
         }
 
         return tomcatBootstrap;

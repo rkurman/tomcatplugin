@@ -84,6 +84,8 @@ public interface TomcatPluginResources {
 
     static final String PREF_PAGE_VERSION9_LABEL = TomcatLauncherPlugin.getResourceString("pref.page.version9.label");
 
+    static final String PREF_PAGE_VERSION10_LABEL = TomcatLauncherPlugin.getResourceString("pref.page.version10.label");
+
     static final String PREF_PAGE_HOME_LABEL =
                     TomcatLauncherPlugin.getResourceString("pref.page.home.label");
 
